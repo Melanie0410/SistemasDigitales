@@ -1,0 +1,114 @@
+using System.Diagnostics;
+using System.Net.NetworkInformation;
+using System.Security.Principal;
+using System.Management;
+
+
+
+namespace Tarea1
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("===== Gestión del Kernel en Windows =====\n");
+
+            GestionProcesos();
+            GestionMemoria();
+            GestionArchivos();
+            GestionDispositivos();
+            GestionRedes();
+            GestionSeguridad();
+
+            Console.WriteLine("\nPresiona cualquier tecla para salir...");
+            Console.ReadKey();
+        }
+
+        // Gestión de Procesos en Windows
+        static void GestionProcesos()
+        {
+            Console.WriteLine("\n--- Gestión de Procesos ---");
+            Process[] processes = Process.GetProcesses();
+            foreach (Process proc in processes)
+            {
+                Console.WriteLine($"ID: {proc.Id}, Nombre: {proc.ProcessName}, Memoria: {proc.PrivateMemorySize64 / 1024} KB");
+            }
+            // Al ejecutar esta funcion se muestra una lista mostrando el id, el nombre y cuanta memoria consume cada proceso 
+        }
+
+        // Gestión de Memoria en Windows
+        static void GestionMemoria()
+        {
+            Console.WriteLine("\n--- Gestión de Memoria ---");
+
+            ulong totalMemory = 0;
+            ulong availableMemory = 0;
+
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem");
+            foreach (ManagementObject obj in searcher.Get())
+            {
+                totalMemory = Convert.ToUInt64(obj["TotalVisibleMemorySize"]) / 1024;  
+                availableMemory = Convert.ToUInt64(obj["FreePhysicalMemory"]) / 1024;  
+            }
+
+            Console.WriteLine($"Memoria total: {totalMemory} MB");
+            Console.WriteLine($"Memoria disponible: {availableMemory} MB");
+
+            Process proc = Process.GetCurrentProcess();
+            Console.WriteLine($"Memoria usada por este proceso: {proc.WorkingSet64 / 1024} KB");
+            //Al ejecutar esta funcion se mostrara en la consola la memoria total, memoria disponible y la memoria que se uso en este proceso
+        }
+
+        // Gestión de Archivos en Windows
+        static void GestionArchivos()
+        {
+            Console.WriteLine("\n--- Gestión de Archivos ---");
+            string path = @"C:\Windows\System32";
+            string[] files = Directory.GetFiles(path);
+            Console.WriteLine($"Archivos en {path}:");
+
+            foreach (var file in files)
+            {
+                Console.WriteLine(file);
+            }
+            // Al ejecutar esta funcion se imprimen todos los archivos que hay dentro de la carpeta en este caso C:\Windows
+        }
+
+        // Gestión de Dispositivos en Windows
+        static void GestionDispositivos()
+        {
+            Console.WriteLine("\n--- Gestión de Dispositivos ---");
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_DiskDrive");
+
+            foreach (ManagementObject wmi_HD in searcher.Get())
+            {
+                Console.WriteLine($"Disco: {wmi_HD["Model"]}, Tamaño: {Convert.ToUInt64(wmi_HD["Size"]) / (1024 * 1024 * 1024)} GB");
+            }
+                // Al ejecutar esta funcion se muestran los dispositivos de almacenamiento conectados al sistema
+        }
+
+        // Gestión de Redes en Windows
+        static void GestionRedes()
+        {
+            Console.WriteLine("\n--- Gestión de Redes ---");
+            foreach (NetworkInterface netInterface in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                Console.WriteLine($"Interfaz: {netInterface.Name}, Estado: {netInterface.OperationalStatus}");
+            }
+            //    // Al ejecutar esta funcion se muestra la lista de las interfaces de red disponibles en el sistema y su estado actual 
+        }
+
+        // Seguridad y Permisos en Windows
+        static void GestionSeguridad()
+        {
+            Console.WriteLine("\n--- Seguridad y Permisos ---");
+            WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            WindowsPrincipal principal = new WindowsPrincipal(identity);
+
+            Console.WriteLine($"Usuario actual: {identity.Name}");
+            Console.WriteLine($"Es administrador: {principal.IsInRole(WindowsBuiltInRole.Administrator)}");
+        }
+        // Al ejecutar esta funcion obtiene el usuario actual del sistema y verifica si es administrador 
+
+    }
+}
