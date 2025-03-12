@@ -1,0 +1,54 @@
+Tarea 2 Sistemas Digitales
+
+GPU: La GPU es una unidad de procesamiento de gráficos, tiene muchos núcleos pequeños y especializados. Estos núcleos ofrecen un enorme desempeño al trabajar juntos y dividir las tareas de procesamiento entre muchos núcleos simultáneamente o en paralelo. La GPU se destaca en tareas altamente paralelas, como renderizar imágenes durante un juego, manipular datos de video durante la creación de contenido y calcular resultados en cargas de trabajo de IA intensivas. 
+
+[1]	Intel.la. [En línea]. Disponible en: https://www.intel.la/content/www/xl/es/products/docs/processors/cpu-vs-gpu.html. [Consultado: 01-mar-2025].
+
+La arquitectura de una GPU consta de varios componentes principales. En primer lugar, tenemos los multiprocesadores, que son unidades de procesamiento que contienen múltiples núcleos o cores. Cada núcleo puede ejecutar instrucciones independientemente, lo que permite realizar cálculos en paralelo.
+Cada multiprocesador también tiene su propia memoria local y memoria compartida, que se utilizan para almacenar datos y acelerar el procesamiento. Además, una GPU también cuenta con memoria global, que se comparte entre todos los multiprocesadores y se utiliza para almacenar datos que son accesibles por todas las unidades de procesamiento.
+
+[2]	“Arquitectura de GPU: Todo lo que necesitas saber”, Toolify.ai. [En línea]. Disponible en: https://www.toolify.ai/es/hardwarees/arquitectura-de-gpu-todo-lo-que-necesitas-saber-2853791. [Consultado: 01-mar-2025].
+
+
+TPU: Una unidad de procesamiento tensorial (TPU) es un circuito integrado de aplicación específica (ASIC ) diseñado específicamente para acelerar tareas de procesamiento lógico y matemático de gran volumen que normalmente están involucradas en cargas de trabajo de aprendizaje automático 
+
+[3]	S. J. Bigelow, “tensor processing unit (TPU)”, WhatIs, 16-jul-2024. [En línea]. Disponible en: https://www.techtarget.com/whatis/definition/tensor-processing-unit-TPU. [Consultado: 01-mar-2025].
+
+
+Neuromorfica: La computación neuromórfica utiliza circuitos electrónicos que imitan la estructura de las neuronas. Estos sistemas procesan información de manera paralela y distribuida, similar al cerebro humano. Esto permite un aprendizaje adaptativo y un procesamiento eficiente de datos sensoriales.
+
+[4]	T. H. P. Online, “¿Qué es la computación neuromórfica y sus implicaciones para la IA?”, Www.hp.com, 17-oct-2024. .
+
+
+Cuántica: La computación cuántica se basa en los principios de la mecánica cuántica para procesar información. A diferencia de los bits clásicos, que pueden ser 0 o 1, los cúbits pueden estar en superposición, representando simultáneamente ambos estados. Esta característica permite a los ordenadores cuánticos realizar cálculos complejos de manera exponencialmente más rápida que las computadoras clásicas en ciertas tareas. Recientemente, Google presentó "Willow", un chip cuántico capaz de realizar en cinco minutos tareas que a los superordenadores más potentes les llevaría un tiempo inconcebible, demostrando avances significativos en la corrección de errores cuánticos y la escalabilidad de estos sistemas.
+
+[5]	S. Jalife, “¿Qué es la Computación Cuántica y cuáles son sus ventajas y desventajas?”, CMD, 08-feb-2023. .
+
+
+Cloud computing: La computación en la nube implica la entrega de recursos y servicios informáticos a través de Internet, permitiendo a las organizaciones acceder a infraestructura, plataformas y software sin necesidad de inversiones en hardware local. Los modelos de implementación incluyen:
+Nube Pública: Servicios ofrecidos por terceros a múltiples clientes a través de la web.​
+
+[6]	Atlassian, “¿Qué es la computación en la nube? Visión general de la nube”, Atlassian. [En línea]. Disponible en: https://www.atlassian.com/es/microservices/cloud-computing. [Consultado: 01-mar-2025].
+
+
+Nube Privada: Infraestructura dedicada exclusivamente a una organización, ya sea gestionada internamente o por terceros.​
+
+[7]	D. Marquez, “Infraestructura en la nube: nube híbrida, privada y pública”, Luma Cloud - Su aliado en la nube, 30-sep-2024. .
+
+Nube Híbrida: Combinación de nubes públicas y privadas, permitiendo la portabilidad de datos y aplicaciones entre ellas.
+
+[8]	“¿Qué es la arquitectura de nube híbrida?”, Ibm.com, 27-sep-2024. .
+
+Multinube: Uso de múltiples servicios de nube de diferentes proveedores para evitar la dependencia de un solo proveedor y mejorar la resiliencia.
+
+[9]	Microsoft.com. [En línea]. Disponible en: https://azure.microsoft.com/en-au/resources/cloud-computing-dictionary/what-is-multi-cloud. [Consultado: 01-mar-2025].
+
+Computación heterogenea: La computación heterogénea se refiere al uso de diferentes tipos de unidades de procesamiento dentro de un sistema para optimizar el rendimiento y la eficiencia energética. Esto incluye la combinación de CPUs, GPUs, TPUs y otros aceleradores especializados para manejar distintas cargas de trabajo de manera más eficiente. Por ejemplo, en plataformas de alto rendimiento, se utilizan aceleradores de hardware para tareas específicas de aprendizaje profundo, mejorando significativamente el rendimiento en aplicaciones de inteligencia artificial. 
+
+[10]	“What is heterogeneous computing?”, Supermicro.com. [En línea]. Disponible en: https://www.supermicro.com/en/glossary/heterogeneous-computing. [Consultado: 01-mar-2025].
+
+Arquitecturas distribuidas en la nube: La nube distribuida es un servicio de computación en la nube que le permite ejecutar una infraestructura de nube pública en varias ubicaciones —los centros de datos de su proveedor de nube, los centros de datos de otros proveedores de nube, centros de datos o centros de colocación de terceros y ubicaciones locales— y gestionarlo todo desde un único plano de control.
+
+Con esta distribución de los servicios de nube pública dirigida y gestionada de forma centralizada, su empresa puede desplegar y ejecutar aplicaciones o componentes de aplicaciones individuales en la combinación de ubicaciones y entornos de nube que mejor se adapte a sus requisitos de rendimiento o conformidad con la normativa, por ejemplo. La nube distribuida resuelve las incoherencias operativas y de gestión que pueden ocurrir en los entornos de nube híbrida o multinube. 
+
+[11]	“¿Qué es la nube distribuida?”, Ibm.com, 17-jul-2023. .
