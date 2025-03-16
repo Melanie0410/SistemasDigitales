@@ -1,0 +1,47 @@
+Para la instalación de Windows:
+-Abrir el gestor de maquinas virtuales
+-Crear la maquina virtual 
+-Crear el volumen 
+-Importar el ISO
+-Asignar memoria y cpu
+-Asignar almacenamiento
+-Al iniciarse la maquina virtual darle en no tengo clave del producto
+-Elegir el sistema operativo que se quiere instalar en mi caso (Windows 10 home)
+-Aceptar términos de licencia
+-Darle click en instalación personalizada
+-Muestra mensaje de bienvenida con Cortana 
+-Seleccionar región
+-Distribución del teclado
+-Conectarse a una red
+-Crear usuario y contraseña 
+
+Para la instalación de Kali:
+-Abrir el gestor de maquinas virtuales
+-Crear la maquina virtual 
+-Crear el volumen 
+-Importar el ISO
+-Asignar memoria y cpu
+-Asignar almacenamiento
+-Seleccionar graphic install
+-Elegir idioma
+-Ubicación, en mi caso fue el numero 4 de Colombia
+-Teclado, numero 71 que corresponde a Español
+-Asignarle un nombre a la maquina
+-Asignar un dominio
+-Asignar un nombre de usuario
+-Asignar una contraseña
+-Modo de partición 
+-Desktop con gnome
+-Instalar grub
+
+Para la instalación de CentOS:
+-Abrir el gestor de maquinas virtuales
+-Crear la maquina virtual 
+-Crear el volumen 
+-Importar el ISO
+-Asignar memoria y cpu
+-Asignar almacenamiento
+-Elegir idioma y región
+-Usuario y contraseña
+-Destino de la instalación
+-Reinicio del sistema
