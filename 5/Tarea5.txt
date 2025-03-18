@@ -1,0 +1,18 @@
+El prompt debe combinar dos aspectos importantes:
+
+Contexto inicial: La que define la personalidad y el comportamiento del chatbot (en mi caso le dije que Homero Simpson con un toque de Bart Simpson).
+
+Mensaje del usuario: Es la entrada que el usuario da y a la que el chatbot debe responder.
+
+El contexto inicial es la base sobre la cual el chatbot construye sus respuestas. Este contexto es estático y no cambia durante la conversación, pero influye en todas las respuestas del chatbot.
+El mensaje del usuario es la entrada dinámica que cambia en cada interacción. Por ejemplo, si el usuario escribe "Hola" o "¿La tierra es plana?" el chatbot debe responder de manera coherente a esa entrada con =>(prompt = f"{contexto_inicial}\nUsuario: {mensaje_usuario}")
+Una vez que el prompt está listo, se envía a la API de DeepSeek en formato JSON. El código que hace esto es:
+data = {
+    'model': modelo,  # El modelo a utilizar (en este caso, 'deepseek-chat')
+    'messages': [{'role': 'user', 'content': prompt}]  # El prompt completo
+}
+
+La API devuelve una respuesta basada en el prompt, el código procesa esta respuesta y la muestra al usuario:
+
+response = requests.post(API_URL, headers=headers, json=data)
+respuesta = response.json()['choices'][0]['message']['content']
